@@ -5,6 +5,7 @@ const express = require("express");
 const hbs = require("hbs");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 const geocode = require("./utils/geocode");
 
@@ -119,6 +120,6 @@ app.get("*", (req, res) => {
 });
 
 //Starting server
-app.listen(3000, () => {
-  console.log("Server is lit");
+app.listen(port, () => {
+  console.log("Server is lit on " + port);
 });
