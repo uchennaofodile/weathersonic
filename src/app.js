@@ -52,9 +52,9 @@ app.get("/about", (req, res) => {
 //Help Page
 app.get("/help", (req, res) => {
   res.render("help", {
-    title: "Help Page",
+    title: "Help",
     name: "Uchenna Ofodile",
-    helpText: "Do you need help?"
+    helpText: "Here to help."
   });
 });
 
@@ -82,24 +82,9 @@ app.get("/weather", (req, res) => {
           address: req.query.address
         };
         res.send(weatherData);
-
-        // res.send({
-        //   forecastData,
-        //   location,
-        //   address: req.query.address
-        // });
       });
     }
   );
-  // res.send(
-  //   //console.log(json)
-  //   {
-  //     address: req.query.address
-  //     //forecast: fd,
-  //     //location: JSON.stringify(loc)
-  //     //json: json
-  //   }
-  // );
 });
 
 app.get("/help/*", (req, res) => {
